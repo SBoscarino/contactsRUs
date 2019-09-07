@@ -66,3 +66,16 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+
+
+Stefanie's Notes:
+
+I used the external API 'RandomAPI', which lets me create the response I want using faker.js. The tool is really great and i highly recommend it.
+Site: https://randomapi.com/documentation#variables
+I wanted each contact to have some kooky things that would at LEAST be fun for you to read.
+
+I used Material UI to help make the site more responsive and clean. I am more famiiar with Bootstrap, but I thought i'd take this opportunity to try something different. 
+
+
