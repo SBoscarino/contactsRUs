@@ -1,3 +1,15 @@
+Stefanie's Notes:
+
+I used the external API 'RandomAPI', which lets me create the response I want using faker.js. The tool is really great and i highly recommend it.
+Site: https://randomapi.com/documentation#variables
+I wanted each contact to have some kooky things that would at LEAST be fun for you to read. What i DID NOT expect from this api was that each image for a request would be the same. This is less fun, but the only other alternative is to make ten separate requests each time and append them to the array.... i would hit my daily quota quickly with that one.
+
+I used Material UI to help make the site more responsive and clean. I am more famiiar with Bootstrap, but I thought i'd take this opportunity to try something different. I learned something new: Material UI REALLY LIKES functional components and not class components. The more you know.
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -67,15 +79,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-
-
-
-Stefanie's Notes:
-
-I used the external API 'RandomAPI', which lets me create the response I want using faker.js. The tool is really great and i highly recommend it.
-Site: https://randomapi.com/documentation#variables
-I wanted each contact to have some kooky things that would at LEAST be fun for you to read.
-
-I used Material UI to help make the site more responsive and clean. I am more famiiar with Bootstrap, but I thought i'd take this opportunity to try something different. 
 
 

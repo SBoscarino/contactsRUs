@@ -1,0 +1,12 @@
+.MainContainer {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: 'row';
+}
+.LeftContainer {
+    width: 28%;
+}
+.RightContainer {
+    width: 68%;
+}

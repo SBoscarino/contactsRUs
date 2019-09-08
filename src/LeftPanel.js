@@ -13,45 +13,67 @@ const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     maxWidth: 360,
-    maxHeight: 300,
+    maxHeight: 400,
     overflow: 'auto',
     backgroundColor: theme.palette.background.paper,
+    overflowY: 'scroll',
+    border: 2,
+    borderColor: '#fff4dd',
+    borderStyle: 'solid',
   },
   inline: {
     display: 'inline',
   },
+  divider: {
+    border: 4,
+    borderColor: '#fff4dd',
+    borderStyle: 'solid',
+  }
 }));
 
-export default function LeftPanel(data){
+export default function LeftPanel(onClick, data){
   const classes = useStyles();
 
   const createList = (data) => {
-    console.log('data in left', data);
-    if (data === undefined || data.length === 0 ){
+    let clickFunction = onClick.onClick
+    let theData = data
+    if (theData.data !== undefined || theData.length > 0){
       return (
-        data.map((customer) => (
-          <ListItem alignItems="flex-start" key={customer.id}>
-            <ListItemAvatar>
-              <Avatar alt={customer.firstName, customer.lastName} src={customer.avatar} />
-            </ListItemAvatar>
-            <ListItemText
-              primary={customer.firstName, customer.lastName}
-              secondary={
-                <React.Fragment>
+        data.data.map((customer) => (
+          <div key={customer.customer.id}>
+            <ListItem alignItems="flex-start" onClick={event => clickFunction(customer)}>
+              <ListItemAvatar>
+                <Avatar alt={customer.customer.firstName} src={customer.customer.avatar} className={classes.divider} />
+              </ListItemAvatar>
+              <ListItemText
+                primary={
+                  <React.Fragment>
                   <Typography
                     component="span"
-                    variant="body2"
+                    variant="h6"
                     className={classes.inline}
                     color="textPrimary"
                   >
-                    {customer.catchPhrase}
+                    {customer.customer.firstName + ' ' + customer.customer.lastName}
                   </Typography>
-                  {" — I'll be in your neighborhood doing errands this…"}
                 </React.Fragment>
-              }
-            />
-          </ListItem>
-        // <Divider variant="inset" component="li" />
+                }
+                secondary={
+                  <React.Fragment>
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className={classes.inline}
+                      color="textPrimary"
+                    >
+                      {customer.customer.email}
+                    </Typography>
+                  </React.Fragment>
+                }
+              />
+            </ListItem>
+            <Divider variant="middle" />
+          </div>
         ))
       )}
       else {
@@ -61,7 +83,7 @@ export default function LeftPanel(data){
 
   return (
     <List className={classes.root}>
-      {createList(data)}
+      {createList(onClick, data)}
     </List>
   );
 }
